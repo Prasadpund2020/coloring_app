@@ -39,25 +39,26 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: DesignConstants.tileGap),
-                    const ChildActionButton(
+                    ChildActionButton(
                       label: 'Free Drawing',
                       icon: Icons.brush,
                       color: DesignConstants.yellow,
-                      onPressed: _notReady,
+                      onPressed: () =>
+                          Navigator.pushNamed(context, AppRoutes.freeDrawing),
                     ),
                     const SizedBox(height: DesignConstants.tileGap),
                     const ChildActionButton(
                       label: 'My Artwork',
                       icon: Icons.photo_library,
                       color: DesignConstants.mint,
-                      onPressed: _notReady,
+                      onPressed: _showComingSoon,
                     ),
                     const SizedBox(height: DesignConstants.tileGap),
                     const ChildActionButton(
                       label: 'Stickers',
                       icon: Icons.emoji_emotions,
                       color: DesignConstants.lavender,
-                      onPressed: _notReady,
+                      onPressed: _showComingSoon,
                     ),
                     const SizedBox(height: DesignConstants.tileGap),
                     ChildActionButton(
@@ -77,7 +78,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  static void _notReady() {}
+  static void _showComingSoon() {}
 }
 
 class _MascotPlaceholder extends StatelessWidget {

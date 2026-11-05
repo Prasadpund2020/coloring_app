@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:little_doodle/app.dart';
+import 'package:little_doodle/features/free_drawing/widgets/drawing_canvas.dart';
 
 void main() {
   testWidgets('home fits a small phone', (WidgetTester tester) async {
@@ -35,6 +36,23 @@ void main() {
     expect(find.text('Animals'), findsOneWidget);
     expect(find.text('Nature'), findsOneWidget);
     expect(tester.takeException(), isNull);
+    await tester.binding.setSurfaceSize(null);
+  });
+
+  testWidgets('free drawing records a gesture and exposes controls', (
+    WidgetTester tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(411, 891));
+    await tester.pumpWidget(const LittleDoodleApp());
+
+    await tester.tap(find.text('Free Drawing'));
+    await tester.pumpAndSettle();
+    expect(find.byType(DrawingCanvas), findsOneWidget);
+    expect(find.bySemanticsLabel('Undo'), findsOneWidget);
+
+    await tester.drag(find.byType(DrawingCanvas), const Offset(80, 80));
+    await tester.pump();
+    expect(find.bySemanticsLabel('Undo'), findsOneWidget);
     await tester.binding.setSurfaceSize(null);
   });
 }
