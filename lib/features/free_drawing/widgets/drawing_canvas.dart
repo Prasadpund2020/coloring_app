@@ -7,6 +7,7 @@ import '../controllers/drawing_controller.dart';
 import '../models/drawing_stroke.dart';
 import '../painters/stroke_geometry.dart';
 import '../painters/stroke_painter.dart';
+import 'sticker_layer.dart';
 
 class DrawingCanvas extends StatefulWidget {
   const DrawingCanvas({required this.controller, super.key});
@@ -145,6 +146,12 @@ class _DrawingCanvasState extends State<DrawingCanvas> {
                           ),
                         );
                       },
+                ),
+                ListenableBuilder(
+                  listenable: _controller,
+                  builder: (BuildContext context, Widget? child) {
+                    return StickerLayer(controller: _controller, size: size);
+                  },
                 ),
               ],
             ),

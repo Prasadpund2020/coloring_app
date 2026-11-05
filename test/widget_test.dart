@@ -39,6 +39,22 @@ void main() {
     await tester.binding.setSurfaceSize(null);
   });
 
+  testWidgets('category lists a real cached coloring page', (
+    WidgetTester tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(411, 891));
+    await tester.pumpWidget(const LittleDoodleApp());
+
+    await tester.tap(find.text('Colouring Book'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Animals'));
+    await tester.pump();
+    await tester.pumpAndSettle();
+
+    expect(find.text('fish'), findsOneWidget);
+    await tester.binding.setSurfaceSize(null);
+  });
+
   testWidgets('free drawing records a gesture and exposes controls', (
     WidgetTester tester,
   ) async {

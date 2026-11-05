@@ -12,6 +12,9 @@ abstract final class DesignConstants {
   static const double smallBrushWidth = 0.012;
   static const double mediumBrushWidth = 0.025;
   static const double largeBrushWidth = 0.05;
+  static const int maximumStickers = 12;
+  static const double minimumStickerScale = 0.12;
+  static const double maximumStickerScale = 0.4;
 
   static const Color ink = Color(0xFF243248);
   static const Color cream = Color(0xFFFFF8E8);

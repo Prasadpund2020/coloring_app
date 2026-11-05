@@ -12,3 +12,9 @@ Phase 3 adds the asset validator. Run `dart run tools/validate_coloring_assets.d
 before committing SVG changes. It validates all three current pages and rejects
 invalid XML, wrong viewBoxes, forbidden SVG content, duplicate IDs, open paths,
 and oversized files.
+
+Phase 4 widget tests open a real category page and verify its cached fish page.
+Sticker controller tests cover normalized coordinates, clamping, resizing,
+deletion, and the maximum sticker count. The page cache is bounded by the
+small current catalog and reuses parsed pages by asset ID; a full memory profile
+is reserved for Phase 7.

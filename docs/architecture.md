@@ -21,3 +21,8 @@ Phase 3 parses authored SVG pages into region paths and outline paths. Touch
 coordinates use the same uniform scale and letterbox offset as painting.
 Regions are tested in reverse order so overlapping foreground regions win;
 outlines are painted after fills.
+
+Phase 4 uses a small asset catalog and a static in-memory page cache. Category
+lists load only the visible card's SVG and reuse its parsed page when reopened.
+Stickers are independent normalized overlays on the free-drawing canvas; their
+positions are clamped to a safe inset so they cannot be dragged fully off-canvas.

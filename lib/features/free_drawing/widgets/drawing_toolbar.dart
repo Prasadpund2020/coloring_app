@@ -41,6 +41,38 @@ class DrawingToolbar extends StatelessWidget {
             label: controller.isEraser ? 'Brush' : 'Eraser',
             onPressed: controller.toggleEraser,
           ),
+          for (final (String assetId, String label) in <(String, String)>[
+            ('star', 'Star sticker'),
+            ('heart', 'Heart sticker'),
+            ('sun', 'Sun sticker'),
+            ('rainbow', 'Rainbow sticker'),
+          ])
+            _ToolbarButton(
+              icon: Icons.emoji_emotions,
+              label: label,
+              onPressed: () => controller.addSticker(assetId),
+            ),
+          _ToolbarButton(
+            icon: Icons.remove,
+            label: 'Make sticker smaller',
+            onPressed: controller.selectedStickerId == null
+                ? null
+                : () => controller.resizeSelectedSticker(-0.02),
+          ),
+          _ToolbarButton(
+            icon: Icons.add,
+            label: 'Make sticker larger',
+            onPressed: controller.selectedStickerId == null
+                ? null
+                : () => controller.resizeSelectedSticker(0.02),
+          ),
+          _ToolbarButton(
+            icon: Icons.delete,
+            label: 'Delete sticker',
+            onPressed: controller.selectedStickerId == null
+                ? null
+                : controller.deleteSelectedSticker,
+          ),
           for (final Color color in DesignConstants.drawingPalette)
             _ColorButton(
               color: color,

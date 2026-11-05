@@ -21,3 +21,10 @@
 - Added region hit testing with aspect-ratio-preserving letterboxing.
 - Added colouring state, undo/redo/reset history, controller, painter, and UI.
 - Added flower, house, and fish test pages plus the asset validator.
+
+## Phase 4
+
+- Added the asset catalog, lazy category page list, and runtime SVG thumbnails.
+- Added normalized sticker placement, dragging, selection, resizing, deletion,
+  and a 12-sticker maximum.
+- Added sticker and category navigation tests.
