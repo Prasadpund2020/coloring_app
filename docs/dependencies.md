@@ -27,3 +27,14 @@
   permissions and adds no analytics, tracking, or network code.
 - Smallest alternative: implement all absolute SVG path commands ourselves,
   which would increase parser risk and testing cost.
+
+## `shared_preferences` (Phase 6)
+
+- Solves: persistent local parent settings such as sound effects.
+- Permissions/network: stores values locally and does not provide networking.
+
+## `url_launcher` (Phase 6)
+
+- Solves: opening the privacy policy in the platform browser.
+- Permissions/network: only launches a user-selected external URL; the app
+  itself does not fetch remote content.

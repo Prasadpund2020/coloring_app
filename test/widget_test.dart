@@ -71,4 +71,18 @@ void main() {
     expect(find.bySemanticsLabel('Undo'), findsOneWidget);
     await tester.binding.setSurfaceSize(null);
   });
+
+  testWidgets('parent area is protected by a parent check', (
+    WidgetTester tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(411, 891));
+    await tester.pumpWidget(const LittleDoodleApp());
+
+    await tester.tap(find.text('Parent Area'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Grown-ups only'), findsOneWidget);
+    expect(find.text('Continue'), findsOneWidget);
+    await tester.binding.setSurfaceSize(null);
+  });
 }

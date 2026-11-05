@@ -5,7 +5,7 @@ import '../../features/coloring/screens/coloring_screen.dart';
 import '../../features/free_drawing/screens/free_drawing_screen.dart';
 import '../../features/gallery/screens/gallery_screen.dart';
 import '../../features/home/screens/home_screen.dart';
-import '../../features/parent_area/screens/parent_area_screen.dart';
+import '../../features/parent_area/screens/parent_gate_screen.dart';
 import '../../features/shared/screens/coming_soon_screen.dart';
 
 abstract final class AppRoutes {
@@ -28,7 +28,7 @@ abstract final class AppRoutes {
       case gallery:
         return _page(const GalleryScreen());
       case parentArea:
-        return _page(const ParentAreaScreen());
+        return _page(const ParentGateScreen());
       case comingSoon:
         return _page(const ComingSoonScreen());
       case home:

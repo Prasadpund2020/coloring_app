@@ -35,3 +35,10 @@
 - Added atomic JSON, thumbnail, and preview writes.
 - Added PNG export at 300px and 1080px widths.
 - Added save actions for drawing and coloring and the local gallery.
+
+## Phase 6
+
+- Added persistent sound-effect settings with `shared_preferences`.
+- Added built-in child feedback sounds without network or media assets.
+- Added a math parent gate and a protected parent settings screen.
+- Added sound-effect controls and an external privacy-policy action.

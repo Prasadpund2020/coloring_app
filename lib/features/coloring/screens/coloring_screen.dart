@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../core/audio/child_feedback.dart';
 import '../../../core/constants/design_constants.dart';
+import '../../../core/settings/app_settings.dart';
 import '../../gallery/models/artwork.dart';
 import '../../gallery/services/artwork_exporter.dart';
 import '../../gallery/services/artwork_repository.dart';
@@ -130,6 +133,13 @@ class _ColoringScreenState extends State<ColoringScreen>
       thumbnail: thumbnail,
       preview: preview,
     );
+    if (!mounted) {
+      return;
+    }
+    final AppSettingsRepository settings = AppSettingsRepository(
+      await SharedPreferences.getInstance(),
+    );
+    await ChildFeedback(settings).playSuccess();
     if (!mounted) {
       return;
     }

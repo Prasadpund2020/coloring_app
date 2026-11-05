@@ -31,3 +31,7 @@ Phase 5 stores each artwork in a private application-documents folder with
 atomic temporary-file writes. JSON is versioned and tolerant of unknown fields;
 corrupt entries are skipped. Preview images are rendered with
 `PictureRecorder` at 1080px and 300px.
+
+Phase 6 stores parent preferences locally with `shared_preferences`. Child
+feedback uses Flutter's built-in system click sound, and the parent area is
+protected by an arithmetic gate before settings are shown.
