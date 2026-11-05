@@ -7,11 +7,13 @@ class DrawingToolbar extends StatelessWidget {
   const DrawingToolbar({
     required this.controller,
     required this.onHome,
+    required this.onSave,
     super.key,
   });
 
   final DrawingController controller;
   final VoidCallback onHome;
+  final VoidCallback onSave;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +23,7 @@ class DrawingToolbar extends StatelessWidget {
       child: Row(
         children: <Widget>[
           _ToolbarButton(icon: Icons.home, label: 'Home', onPressed: onHome),
+          _ToolbarButton(icon: Icons.save, label: 'Save', onPressed: onSave),
           _ToolbarButton(
             icon: Icons.undo,
             label: 'Undo',

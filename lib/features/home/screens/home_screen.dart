@@ -47,11 +47,12 @@ class HomeScreen extends StatelessWidget {
                           Navigator.pushNamed(context, AppRoutes.freeDrawing),
                     ),
                     const SizedBox(height: DesignConstants.tileGap),
-                    const ChildActionButton(
+                    ChildActionButton(
                       label: 'My Artwork',
                       icon: Icons.photo_library,
                       color: DesignConstants.mint,
-                      onPressed: _showComingSoon,
+                      onPressed: () =>
+                          Navigator.pushNamed(context, AppRoutes.gallery),
                     ),
                     const SizedBox(height: DesignConstants.tileGap),
                     const ChildActionButton(

@@ -28,3 +28,10 @@
 - Added normalized sticker placement, dragging, selection, resizing, deletion,
   and a 12-sticker maximum.
 - Added sticker and category navigation tests.
+
+## Phase 5
+
+- Added versioned artwork models and tolerant private-file repository.
+- Added atomic JSON, thumbnail, and preview writes.
+- Added PNG export at 300px and 1080px widths.
+- Added save actions for drawing and coloring and the local gallery.

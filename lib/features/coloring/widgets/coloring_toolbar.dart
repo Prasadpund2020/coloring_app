@@ -7,11 +7,13 @@ class ColoringToolbar extends StatelessWidget {
   const ColoringToolbar({
     required this.controller,
     required this.onHome,
+    required this.onSave,
     super.key,
   });
 
   final ColoringController controller;
   final VoidCallback onHome;
+  final VoidCallback onSave;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +23,7 @@ class ColoringToolbar extends StatelessWidget {
       child: Row(
         children: <Widget>[
           _ToolButton(icon: Icons.home, label: 'Home', onPressed: onHome),
+          _ToolButton(icon: Icons.save, label: 'Save', onPressed: onSave),
           _ToolButton(
             icon: Icons.undo,
             label: 'Undo',

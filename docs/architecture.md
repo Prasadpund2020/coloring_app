@@ -26,3 +26,8 @@ Phase 4 uses a small asset catalog and a static in-memory page cache. Category
 lists load only the visible card's SVG and reuse its parsed page when reopened.
 Stickers are independent normalized overlays on the free-drawing canvas; their
 positions are clamped to a safe inset so they cannot be dragged fully off-canvas.
+
+Phase 5 stores each artwork in a private application-documents folder with
+atomic temporary-file writes. JSON is versioned and tolerant of unknown fields;
+corrupt entries are skipped. Preview images are rendered with
+`PictureRecorder` at 1080px and 300px.
