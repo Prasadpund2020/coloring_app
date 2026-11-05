@@ -7,3 +7,8 @@ execute the suite.
 Phase 2 also covers tap dots, normalized coordinate validation, path smoothing,
 pen/eraser history, redo clearing, clear, 1,000 strokes, and drawing-screen
 gesture navigation.
+
+Phase 3 adds the asset validator. Run `dart run tools/validate_coloring_assets.dart`
+before committing SVG changes. It validates all three current pages and rejects
+invalid XML, wrong viewBoxes, forbidden SVG content, duplicate IDs, open paths,
+and oversized files.

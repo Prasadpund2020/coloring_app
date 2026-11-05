@@ -14,3 +14,10 @@
 - Added committed/live repaint layers, child-friendly toolbar, and drawing screen.
 - Added cached rasterization after 150 strokes, retaining 50 recent vector strokes.
 - Added model, geometry, controller, and gesture widget tests.
+
+## Phase 3
+
+- Added local SVG parsing with `xml` and `path_drawing`.
+- Added region hit testing with aspect-ratio-preserving letterboxing.
+- Added colouring state, undo/redo/reset history, controller, painter, and UI.
+- Added flower, house, and fish test pages plus the asset validator.

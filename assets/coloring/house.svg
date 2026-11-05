@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <g id="regions">
+    <path id="house_wall" d="M240 430 L760 430 L760 850 L240 850 Z"/>
+    <path id="house_roof" d="M160 430 L500 140 L840 430 Z"/>
+    <path id="house_door" d="M430 850 L430 620 L570 620 L570 850 Z"/>
+    <path id="house_window" d="M300 520 L410 520 L410 630 L300 630 Z"/>
+    <path id="house_window_right" d="M590 520 L700 520 L700 630 L590 630 Z"/>
+  </g>
+  <g id="outlines">
+    <path d="M240 430 L760 430 L760 850 L240 850 Z M160 430 L500 140 L840 430 Z"/>
+    <path d="M430 850 L430 620 L570 620 L570 850 Z"/>
+    <path d="M300 520 L410 520 L410 630 L300 630 Z M590 520 L700 520 L700 630 L590 630 Z"/>
+  </g>
+</svg>

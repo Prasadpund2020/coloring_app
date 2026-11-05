@@ -16,3 +16,8 @@ After 150 committed strokes, the canvas rasterizes older strokes with
 `PictureRecorder` and retains the newest 50 as vectors. Undo and redo invalidate
 the cache, so the complete vector history remains available to the controller
 while the active painter stays bounded.
+
+Phase 3 parses authored SVG pages into region paths and outline paths. Touch
+coordinates use the same uniform scale and letterbox offset as painting.
+Regions are tested in reverse order so overlapping foreground regions win;
+outlines are painted after fills.
