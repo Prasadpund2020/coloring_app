@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <g id="regions">
+    <path id="cartoon_bunny_ear_left" d="M330 330 C250 160 290 80 390 260 L400 380 Z"/>
+    <path id="cartoon_bunny_ear_right" d="M610 330 C710 80 750 160 670 330 L600 380 Z"/>
+    <path id="cartoon_bunny_head" d="M250 430 C250 270 750 270 750 430 C750 700 250 700 250 430 Z"/>
+    <path id="cartoon_bunny_belly" d="M370 650 C370 540 630 540 630 650 C630 820 370 820 370 650 Z"/>
+    <path id="cartoon_bunny_bow" d="M430 760 L500 710 L570 760 L500 810 Z"/>
+  </g>
+  <g id="outlines">
+    <path d="M330 330 C250 160 290 80 390 260 L400 380 Z"/>
+    <path d="M610 330 C710 80 750 160 670 330 L600 380 Z"/>
+    <path d="M250 430 C250 270 750 270 750 430 C750 700 250 700 250 430 Z"/>
+    <path d="M370 650 C370 540 630 540 630 650 C630 820 370 820 370 650 Z"/>
+    <path d="M430 760 L500 710 L570 760 L500 810 Z"/>
+    <path d="M380 460 C400 440 420 440 440 460"/>
+    <path d="M560 460 C580 440 600 440 620 460"/>
+    <path d="M470 520 C490 500 510 500 530 520 C510 550 490 550 470 520 Z"/>
+  </g>
+</svg>

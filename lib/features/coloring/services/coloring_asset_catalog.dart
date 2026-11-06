@@ -11,6 +11,21 @@ class ColoringAssetCatalog {
 
   static const List<ColoringAsset> _assets = <ColoringAsset>[
     ColoringAsset(
+      id: 'cartoon_bunny',
+      category: 'Cartoons',
+      assetPath: 'assets/coloring/cartoon_bunny.svg',
+    ),
+    ColoringAsset(
+      id: 'cartoon_robot',
+      category: 'Cartoons',
+      assetPath: 'assets/coloring/cartoon_robot.svg',
+    ),
+    ColoringAsset(
+      id: 'cartoon_monster',
+      category: 'Cartoons',
+      assetPath: 'assets/coloring/cartoon_monster.svg',
+    ),
+    ColoringAsset(
       id: 'fish',
       category: 'Animals',
       assetPath: 'assets/coloring/fish.svg',

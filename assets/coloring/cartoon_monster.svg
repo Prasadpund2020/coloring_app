@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <g id="regions">
+    <path id="cartoon_monster_horn_left" d="M350 300 L260 140 L430 250 Z"/>
+    <path id="cartoon_monster_horn_right" d="M650 300 L740 140 L570 250 Z"/>
+    <path id="cartoon_monster_body" d="M220 420 C220 250 780 250 780 420 L720 800 L280 800 Z"/>
+    <path id="cartoon_monster_belly" d="M370 590 C370 480 630 480 630 590 C630 740 370 740 370 590 Z"/>
+    <path id="cartoon_monster_spot" d="M300 390 C300 340 370 340 370 390 C370 440 300 440 300 390 Z"/>
+    <path id="cartoon_monster_spot_right" d="M630 390 C630 340 700 340 700 390 C700 440 630 440 630 390 Z"/>
+  </g>
+  <g id="outlines">
+    <path d="M350 300 L260 140 L430 250 Z"/>
+    <path d="M650 300 L740 140 L570 250 Z"/>
+    <path d="M220 420 C220 250 780 250 780 420 L720 800 L280 800 Z"/>
+    <path d="M370 590 C370 480 630 480 630 590 C630 740 370 740 370 590 Z"/>
+    <path d="M300 390 C300 340 370 340 370 390 C370 440 300 440 300 390 Z"/>
+    <path d="M630 390 C630 340 700 340 700 390 C700 440 630 440 630 390 Z"/>
+    <path d="M420 500 C460 540 540 540 580 500"/>
+  </g>
+</svg>

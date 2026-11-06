@@ -22,6 +22,7 @@ class ColoringCategoriesScreen extends StatelessWidget {
           ('Vehicles', Icons.directions_car, DesignConstants.sky),
           ('Shapes', Icons.category, DesignConstants.lavender),
           ('Nature', Icons.local_florist, DesignConstants.mint),
+          ('Cartoons', Icons.face, DesignConstants.coral),
         ];
 
     return Scaffold(

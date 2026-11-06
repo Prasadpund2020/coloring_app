@@ -42,3 +42,9 @@
 - Added built-in child feedback sounds without network or media assets.
 - Added a math parent gate and a protected parent settings screen.
 - Added sound-effect controls and an external privacy-policy action.
+
+## Cartoon colouring collection
+
+- Added a dedicated Cartoons category to the colouring book.
+- Added three original, locally bundled cartoon pages: bunny, robot, and
+  monster.

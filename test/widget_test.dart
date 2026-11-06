@@ -55,6 +55,23 @@ void main() {
     await tester.binding.setSurfaceSize(null);
   });
 
+  testWidgets('cartoons category lists original coloring pages', (
+    WidgetTester tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(411, 891));
+    await tester.pumpWidget(const LittleDoodleApp());
+
+    await tester.tap(find.text('Colouring Book'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Cartoons'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('cartoon_bunny'), findsOneWidget);
+    expect(find.text('cartoon_robot'), findsOneWidget);
+    expect(find.text('cartoon_monster'), findsOneWidget);
+    await tester.binding.setSurfaceSize(null);
+  });
+
   testWidgets('free drawing records a gesture and exposes controls', (
     WidgetTester tester,
   ) async {

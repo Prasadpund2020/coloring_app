@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <g id="regions">
+    <path id="cartoon_robot_antenna" d="M470 210 L530 210 L530 330 L470 330 Z"/>
+    <path id="cartoon_robot_head" d="M260 300 L740 300 L700 570 L300 570 Z"/>
+    <path id="cartoon_robot_body" d="M320 570 L680 570 L740 820 L260 820 Z"/>
+    <path id="cartoon_robot_arm_left" d="M260 590 L170 650 L220 710 L320 650 Z"/>
+    <path id="cartoon_robot_arm_right" d="M740 590 L830 650 L780 710 L680 650 Z"/>
+    <path id="cartoon_robot_button" d="M450 660 C450 620 550 620 550 660 C550 700 450 700 450 660 Z"/>
+  </g>
+  <g id="outlines">
+    <path d="M470 210 L530 210 L530 330 L470 330 Z"/>
+    <path d="M260 300 L740 300 L700 570 L300 570 Z"/>
+    <path d="M320 570 L680 570 L740 820 L260 820 Z"/>
+    <path d="M260 590 L170 650 L220 710 L320 650 Z"/>
+    <path d="M740 590 L830 650 L780 710 L680 650 Z"/>
+    <path d="M450 660 C450 620 550 620 550 660 C550 700 450 700 450 660 Z"/>
+    <path d="M390 430 C410 410 430 410 450 430"/>
+    <path d="M550 430 C570 410 590 410 610 430"/>
+  </g>
+</svg>
