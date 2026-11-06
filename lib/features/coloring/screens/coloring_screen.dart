@@ -98,6 +98,7 @@ class _ColoringScreenState extends State<ColoringScreen>
     if (controller == null || repositoryFuture == null) {
       return;
     }
+    try {
     final DateTime now = DateTime.now().toUtc();
     final Artwork artwork = Artwork(
       id: '',
@@ -136,19 +137,33 @@ class _ColoringScreenState extends State<ColoringScreen>
     if (!mounted) {
       return;
     }
-    final AppSettingsRepository settings = AppSettingsRepository(
-      await SharedPreferences.getInstance(),
-    );
-    await ChildFeedback(settings).playSuccess();
+    if (result.isSuccess) {
+      try {
+        final AppSettingsRepository settings = AppSettingsRepository(
+          await SharedPreferences.getInstance(),
+        );
+        await ChildFeedback(settings).playSuccess();
+      } catch (e) {
+        debugPrint('Feedback failed: $e');
+      }
+    }
     if (!mounted) {
       return;
     }
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          result.isSuccess ? 'Saved!' : 'Oops! Could not save this picture.',
+          result.isSuccess ? 'Saved! Check My Artwork' : 'Oops! Could not save this picture.',
         ),
       ),
     );
+    } catch (e) {
+      debugPrint('Save failed: $e');
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Oops! Could not save this picture.')),
+        );
+      }
+    }
   }
 }

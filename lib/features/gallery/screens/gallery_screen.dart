@@ -113,7 +113,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
       return const Icon(Icons.image, size: 72);
     }
     return Image.file(
-      File('${directory.path}\\${artwork.id}\\thumbnail.png'),
+      File('${directory.path}/${artwork.id}/thumbnail.png'),
       errorBuilder: (
         BuildContext context,
         Object error,

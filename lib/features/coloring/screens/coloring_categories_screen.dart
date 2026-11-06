@@ -120,10 +120,24 @@ class _AssetCardState extends State<_AssetCard> {
         _pageCache[widget.asset.id] = result.value!;
         return result.value;
       }
-    } on FlutterError {
-      return null;
+      debugPrint(
+        'Failed to parse ${widget.asset.assetPath}: ${result.error ?? "unknown error"}',
+      );
+    } on FlutterError catch (e) {
+      debugPrint('Failed to load ${widget.asset.assetPath}: $e');
+    } catch (e) {
+      debugPrint('Unexpected error loading ${widget.asset.assetPath}: $e');
     }
     return null;
+  }
+
+  Map<String, Color> _previewFills(ColoringPage page) {
+    final Map<String, Color> fills = <String, Color>{};
+    for (int i = 0; i < page.regions.length; i++) {
+      fills[page.regions[i].id] =
+          DesignConstants.drawingPalette[i % DesignConstants.drawingPalette.length];
+    }
+    return fills;
   }
 
   @override
@@ -132,6 +146,8 @@ class _AssetCardState extends State<_AssetCard> {
       future: _pageFuture,
       builder: (BuildContext context, AsyncSnapshot<ColoringPage?> snapshot) {
         final ColoringPage? page = snapshot.data;
+        final bool isLoading = snapshot.connectionState == ConnectionState.waiting;
+        final bool hasError = snapshot.hasError || (!isLoading && page == null);
         return Card(
           margin: const EdgeInsets.only(bottom: DesignConstants.tileGap),
           child: InkWell(
@@ -145,26 +161,65 @@ class _AssetCardState extends State<_AssetCard> {
             borderRadius: BorderRadius.circular(DesignConstants.cardRadius),
             child: SizedBox(
               height: 180,
-              child: page == null
-                  ? const Center(child: CircularProgressIndicator())
-                  : Row(
-                      children: <Widget>[
-                        Expanded(
-                          child: CustomPaint(
-                            painter: ColoringPainter(
-                              page: page,
-                              fills: const <String, Color>{},
+              child: Padding(
+                padding: const EdgeInsets.all(12),
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      width: 140,
+                      height: 140,
+                      decoration: BoxDecoration(
+                        color: DesignConstants.cream,
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(color: Colors.grey.shade300),
+                      ),
+                      clipBehavior: Clip.hardEdge,
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: <Widget>[
+                          if (isLoading)
+                            const Center(child: CircularProgressIndicator()),
+                          if (hasError)
+                            const Center(
+                              child: Icon(Icons.image_not_supported, size: 48),
                             ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(
+                          if (page != null)
+                            SizedBox.expand(
+                              child: CustomPaint(
+                                painter: ColoringPainter(
+                                  page: page,
+                                  fills: _previewFills(page),
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
                             widget.asset.id,
                             style: Theme.of(context).textTheme.titleLarge,
                           ),
-                        ),
-                      ],
+                          const SizedBox(height: 8),
+                          Text(
+                            isLoading
+                                ? 'Loading...'
+                                : hasError
+                                ? 'Could not load image'
+                                : 'Tap to colour',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                        ],
+                      ),
                     ),
+                  ],
+                ),
+              ),
             ),
           ),
         );

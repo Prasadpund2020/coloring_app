@@ -20,24 +20,27 @@ abstract final class AppRoutes {
   static Route<void> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case coloringCategories:
-        return _page(const ColoringCategoriesScreen());
+        return _page(settings, const ColoringCategoriesScreen());
       case coloring:
-        return _page(const ColoringScreen());
+        return _page(settings, const ColoringScreen());
       case freeDrawing:
-        return _page(const FreeDrawingScreen());
+        return _page(settings, const FreeDrawingScreen());
       case gallery:
-        return _page(const GalleryScreen());
+        return _page(settings, const GalleryScreen());
       case parentArea:
-        return _page(const ParentGateScreen());
+        return _page(settings, const ParentGateScreen());
       case comingSoon:
-        return _page(const ComingSoonScreen());
+        return _page(settings, const ComingSoonScreen());
       case home:
       default:
-        return _page(const HomeScreen());
+        return _page(settings, const HomeScreen());
     }
   }
 
-  static MaterialPageRoute<void> _page(Widget child) {
-    return MaterialPageRoute<void>(builder: (_) => child);
+  static MaterialPageRoute<void> _page(RouteSettings settings, Widget child) {
+    return MaterialPageRoute<void>(
+      settings: settings,
+      builder: (_) => child,
+    );
   }
 }

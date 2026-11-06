@@ -15,7 +15,7 @@ class ArtworkRepository {
 
   static Future<ArtworkRepository> createDefault() async {
     final Directory documents = await getApplicationDocumentsDirectory();
-    final Directory artwork = Directory('${documents.path}\\artwork');
+    final Directory artwork = Directory('${documents.path}/artwork');
     await artwork.create(recursive: true);
     return ArtworkRepository(rootDirectory: artwork);
   }
@@ -30,7 +30,7 @@ class ArtworkRepository {
         if (entity is! Directory) {
           continue;
         }
-        final File file = File('${entity.path}\\artwork.json');
+        final File file = File('${entity.path}/artwork.json');
         if (!await file.exists()) {
           continue;
         }
@@ -58,7 +58,7 @@ class ArtworkRepository {
   }
 
   Future<Result<Artwork>> load(String id) async {
-    final File file = File('${rootDirectory.path}\\$id\\artwork.json');
+    final File file = File('${rootDirectory.path}/$id/artwork.json');
     try {
       final Map<String, Object?> json = Map<String, Object?>.from(
         jsonDecode(await file.readAsString()) as Map,
@@ -87,18 +87,18 @@ class ArtworkRepository {
       updatedAt: DateTime.now().toUtc(),
       payload: artwork.payload,
     );
-    final Directory folder = Directory('${rootDirectory.path}\\$id');
+    final Directory folder = Directory('${rootDirectory.path}/$id');
     try {
       await folder.create(recursive: true);
       await _atomicWrite(
-        File('${folder.path}\\artwork.json'),
+        File('${folder.path}/artwork.json'),
         saved.encode().codeUnits,
       );
       if (thumbnail != null) {
-        await _atomicWrite(File('${folder.path}\\thumbnail.png'), thumbnail);
+        await _atomicWrite(File('${folder.path}/thumbnail.png'), thumbnail);
       }
       if (preview != null) {
-        await _atomicWrite(File('${folder.path}\\preview.png'), preview);
+        await _atomicWrite(File('${folder.path}/preview.png'), preview);
       }
       return Result<Artwork>.success(saved);
     } on FileSystemException catch (error) {
@@ -108,7 +108,7 @@ class ArtworkRepository {
 
   Future<Result<void>> delete(String id) async {
     try {
-      final Directory folder = Directory('${rootDirectory.path}\\$id');
+      final Directory folder = Directory('${rootDirectory.path}/$id');
       if (await folder.exists()) {
         await folder.delete(recursive: true);
       }
