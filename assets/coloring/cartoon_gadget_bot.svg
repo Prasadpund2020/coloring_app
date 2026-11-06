@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <g id="regions">
+    <path id="gadget_bot_antenna" d="M470 170 L530 170 L530 280 L470 280 Z"/>
+    <path id="gadget_bot_head" d="M250 300 C250 240 750 240 750 300 L700 560 L300 560 Z"/>
+    <path id="gadget_bot_body" d="M320 560 L680 560 L730 820 L270 820 Z"/>
+    <path id="gadget_bot_arm_left" d="M280 590 L150 680 L210 740 L340 650 Z"/>
+    <path id="gadget_bot_arm_right" d="M720 590 L850 680 L790 740 L660 650 Z"/>
+    <path id="gadget_bot_pocket" d="M410 670 L590 670 L570 790 L430 790 Z"/>
+  </g>
+  <g id="outlines">
+    <path d="M470 170 L530 170 L530 280 L470 280 Z"/>
+    <path d="M250 300 C250 240 750 240 750 300 L700 560 L300 560 Z"/>
+    <path d="M320 560 L680 560 L730 820 L270 820 Z"/>
+    <path d="M280 590 L150 680 L210 740 L340 650 Z"/>
+    <path d="M720 590 L850 680 L790 740 L660 650 Z"/>
+    <path d="M410 670 L590 670 L570 790 L430 790 Z"/>
+    <path d="M380 410 C400 390 420 390 440 410"/>
+    <path d="M560 410 C580 390 600 390 620 410"/>
+    <path d="M450 485 L550 485"/>
+  </g>
+</svg>

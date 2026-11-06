@@ -1,5 +1,4 @@
-import 'dart:ui';
-
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:little_doodle/app.dart';
@@ -67,7 +66,21 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('cartoon_bunny'), findsOneWidget);
+    expect(find.text('cartoon_gadget_bot'), findsOneWidget);
+    expect(find.text('cartoon_village_hero'), findsOneWidget);
+    expect(find.text('cartoon_jungle_explorer'), findsOneWidget);
+    expect(find.text('cartoon_sky_cat'), findsOneWidget);
+    await tester.scrollUntilVisible(
+      find.text('cartoon_robot'),
+      300,
+      scrollable: find.byType(Scrollable),
+    );
     expect(find.text('cartoon_robot'), findsOneWidget);
+    await tester.scrollUntilVisible(
+      find.text('cartoon_monster'),
+      300,
+      scrollable: find.byType(Scrollable),
+    );
     expect(find.text('cartoon_monster'), findsOneWidget);
     await tester.binding.setSurfaceSize(null);
   });

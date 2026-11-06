@@ -48,3 +48,5 @@
 - Added a dedicated Cartoons category to the colouring book.
 - Added three original, locally bundled cartoon pages: bunny, robot, and
   monster.
+- Added four additional distinct original characters: gadget bot, village
+  hero, jungle explorer, and sky cat.

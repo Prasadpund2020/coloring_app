@@ -13,3 +13,7 @@ locally so the app does not download fonts at runtime.
 | `assets/coloring/cartoon_bunny.svg` | Human-authored cartoon asset | Project original | Yes | 2026-11-06 | Copilot |
 | `assets/coloring/cartoon_robot.svg` | Human-authored cartoon asset | Project original | Yes | 2026-11-06 | Copilot |
 | `assets/coloring/cartoon_monster.svg` | Human-authored cartoon asset | Project original | Yes | 2026-11-06 | Copilot |
+| `assets/coloring/cartoon_gadget_bot.svg` | Human-authored cartoon asset | Project original | Yes | 2026-11-06 | Copilot |
+| `assets/coloring/cartoon_village_hero.svg` | Human-authored cartoon asset | Project original | Yes | 2026-11-06 | Copilot |
+| `assets/coloring/cartoon_jungle_explorer.svg` | Human-authored cartoon asset | Project original | Yes | 2026-11-06 | Copilot |
+| `assets/coloring/cartoon_sky_cat.svg` | Human-authored cartoon asset | Project original | Yes | 2026-11-06 | Copilot |

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <g id="regions">
+    <path id="jungle_explorer_hat" d="M260 300 C350 170 650 170 740 300 L680 350 L320 350 Z"/>
+    <path id="jungle_explorer_face" d="M300 390 C300 280 700 280 700 390 C700 560 300 560 300 390 Z"/>
+    <path id="jungle_explorer_shirt" d="M330 550 L670 550 L760 820 L240 820 Z"/>
+    <path id="jungle_explorer_bag" d="M250 570 L360 590 L330 780 L220 750 Z"/>
+    <path id="jungle_explorer_binoculars" d="M400 430 L480 430 L480 500 L400 500 Z"/>
+    <path id="jungle_explorer_binoculars_right" d="M520 430 L600 430 L600 500 L520 500 Z"/>
+  </g>
+  <g id="outlines">
+    <path d="M260 300 C350 170 650 170 740 300 L680 350 L320 350 Z"/>
+    <path d="M300 390 C300 280 700 280 700 390 C700 560 300 560 300 390 Z"/>
+    <path d="M330 550 L670 550 L760 820 L240 820 Z"/>
+    <path d="M250 570 L360 590 L330 780 L220 750 Z"/>
+    <path d="M400 430 L480 430 L480 500 L400 500 Z"/>
+    <path d="M520 430 L600 430 L600 500 L520 500 Z"/>
+    <path d="M460 520 L540 520"/>
+  </g>
+</svg>

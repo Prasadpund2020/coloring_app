@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <g id="regions">
+    <path id="village_hero_hat" d="M300 300 L700 300 L650 190 L350 190 Z"/>
+    <path id="village_hero_face" d="M300 350 C300 250 700 250 700 350 C700 560 300 560 300 350 Z"/>
+    <path id="village_hero_scarf" d="M300 540 L700 540 L650 650 L350 650 Z"/>
+    <path id="village_hero_shirt" d="M330 640 L670 640 L760 820 L240 820 Z"/>
+    <path id="village_hero_belt" d="M300 720 L700 720 L700 780 L300 780 Z"/>
+    <path id="village_hero_badge" d="M450 670 C450 630 550 630 550 670 C550 710 450 710 450 670 Z"/>
+  </g>
+  <g id="outlines">
+    <path d="M300 300 L700 300 L650 190 L350 190 Z"/>
+    <path d="M300 350 C300 250 700 250 700 350 C700 560 300 560 300 350 Z"/>
+    <path d="M300 540 L700 540 L650 650 L350 650 Z"/>
+    <path d="M330 640 L670 640 L760 820 L240 820 Z"/>
+    <path d="M300 720 L700 720 L700 780 L300 780 Z"/>
+    <path d="M450 670 C450 630 550 630 550 670 C550 710 450 710 450 670 Z"/>
+    <path d="M390 410 C410 390 430 390 450 410"/>
+    <path d="M550 410 C570 390 590 390 610 410"/>
+    <path d="M440 480 C480 510 520 510 560 480"/>
+  </g>
+</svg>
